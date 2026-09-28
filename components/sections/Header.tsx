@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/ui/Logo";
 import { useActiveSection } from "@/hooks/useActiveSection";
@@ -51,9 +52,9 @@ export function Header() {
   return (
     <header ref={headerRef} className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper supports-[backdrop-filter]:bg-paper/92 supports-[backdrop-filter]:backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-4 px-5 py-3 md:px-8 lg:px-14 xl:px-[72px]">
-        <a href="/" className="shrink-0" aria-label="REZO M, accueil">
+        <Link href="/" className="shrink-0" aria-label="REZO M, accueil">
           <Logo priority />
-        </a>
+        </Link>
 
         <nav aria-label="Navigation principale" className="hidden items-center gap-6 lg:flex">
           {navigation.map((item) => {
@@ -62,7 +63,7 @@ export function Header() {
             const onHome = item.href === "/" && pathname === "/" && !sectionIds.includes(active);
             const current = inSection || onAbout || onHome;
             return (
-              <a
+              <Link
                 key={item.id}
                 href={item.href}
                 aria-current={current ? (item.href.includes("#") ? "true" : "page") : undefined}
@@ -76,13 +77,13 @@ export function Header() {
                   )}
                 />
                 {item.label}
-              </a>
+              </Link>
             );
           })}
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href="/#adhesion" className="group relative inline-flex min-h-11 items-center">
+          <Link href="/#adhesion" className="group relative inline-flex min-h-11 items-center">
             <span aria-hidden className="relative z-10 mr-2.5 grid h-3 w-3 shrink-0 place-items-center">
               <span className="absolute inset-0 rounded-full border border-navy/40" />
               <span className="h-1.5 w-1.5 rounded-full bg-azure transition-transform duration-200 group-hover:scale-125" />
@@ -92,7 +93,7 @@ export function Header() {
               <span className="sm:hidden">Rejoindre</span>
               <span className="hidden sm:inline">Rejoindre REZO M</span>
             </span>
-          </a>
+          </Link>
           <button
             ref={closeRef}
             type="button"
@@ -118,7 +119,7 @@ export function Header() {
         >
           <nav aria-label="Navigation mobile" className="flex flex-col px-5 py-6">
             {navigation.map((item, index) => (
-              <a
+              <Link
                 key={item.id}
                 href={item.href}
                 className="flex min-h-14 items-center gap-4 border-b border-line text-[1.35rem] font-display uppercase tracking-[-0.04em]"
@@ -126,7 +127,7 @@ export function Header() {
               >
                 <span className="font-mono text-[11px] tracking-[0.16em] text-muted">{String(index + 1).padStart(2, "0")}</span>
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { SectionShell } from "@/components/ui/SectionShell";
@@ -85,8 +86,8 @@ export function PartnershipSection() {
                     Intl
                   </span>
                 </div>
-                <div className="mt-5 flex h-16 items-center md:h-[4.5rem]">
-                  <img src={bay.logo} alt={bay.name} className="max-h-full w-auto max-w-[210px] object-contain object-left" />
+                <div className="relative mt-5 h-16 w-full max-w-[210px] md:h-[4.5rem]">
+                  <Image src={bay.logo} alt={bay.name} fill sizes="210px" className="object-contain object-left" />
                 </div>
                 <p className="mt-3 max-w-[28ch] text-[14px] leading-snug text-charcoal">{bay.text}</p>
               </article>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { SignalIndicator } from "@/components/ui/SignalIndicator";
 import { navigation, site } from "@/lib/site";
@@ -15,9 +17,9 @@ export function Footer() {
           <ul className="mt-4 space-y-1">
             {navigation.map((item) => (
               <li key={item.id}>
-                <a href={item.href} className="inline-flex min-h-11 items-center text-[15px] underline-offset-4 hover:underline">
+                <Link href={item.href} className="inline-flex min-h-11 items-center text-[15px] underline-offset-4 hover:underline">
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -52,7 +54,14 @@ export function Footer() {
         </div>
         <div className="mx-auto flex w-full max-w-[1400px] items-center justify-center gap-3 border-t border-white/10 px-5 py-3 md:px-8 lg:px-14 xl:px-[72px]">
           <span className="font-mono text-[11px] uppercase tracking-[0.16em] text-paper/70">Propulsé par</span>
-          <img src="/vinkodeai.png" alt="VinkodeAI" className="h-8 w-auto" />
+          <Image
+            src="/vinkodeai.png"
+            alt="VinkodeAI"
+            width={720}
+            height={171}
+            className="h-8 w-auto"
+            style={{ width: "auto", height: "2rem" }}
+          />
         </div>
       </div>
     </footer>
