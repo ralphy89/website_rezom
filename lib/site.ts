@@ -2,7 +2,7 @@ export const site = {
   name: "REZO M",
   slogan: "Connecter – Collaborer – Réussir",
   tagline: "Les connexions créent les opportunités.",
-  email: "contact@rezom.org",
+  email: "contact@rezom.online",
   year: 2026,
   socials: [
     { label: "LinkedIn", href: "" },

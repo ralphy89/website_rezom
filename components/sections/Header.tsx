@@ -50,7 +50,7 @@ export function Header() {
   }, [open]);
 
   return (
-    <header ref={headerRef} className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper supports-[backdrop-filter]:bg-paper/92 supports-[backdrop-filter]:backdrop-blur-md">
+    <header ref={headerRef} className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper lg:supports-[backdrop-filter]:bg-paper/92 lg:supports-[backdrop-filter]:backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-4 px-5 py-3 md:px-8 lg:px-14 xl:px-[72px]">
         <Link href="/" className="shrink-0" aria-label="REZO M, accueil">
           <Logo priority />
