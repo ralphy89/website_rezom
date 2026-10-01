@@ -15,13 +15,12 @@ export function MembersSection() {
     <SectionShell id="reseau">
       <div className="grid items-start gap-10 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
-          <SectionLabel index="03">Membres</SectionLabel>
-          <h2 className="section-title text-ink">Qui peut rejoindre REZO M ?</h2>
+          <SectionLabel>Membres</SectionLabel>
+          <h2 className="section-title text-ink">Qui peut rejoindre REZOM ?</h2>
         </Reveal>
         <div className="lg:col-span-7">
           <div className="border border-line-strong bg-surface p-5 md:p-7" aria-live="polite">
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Profil {current.index}</p>
-            <p className="mt-4 max-w-[18ch] font-display text-[clamp(1.7rem,3vw,2.6rem)] leading-[1.05] tracking-[-0.04em]">
+            <p className="max-w-[28ch] font-display text-[1.1rem] leading-snug tracking-[-0.03em] md:max-w-[18ch] md:text-[clamp(1.7rem,3vw,2.6rem)] md:leading-[1.05]">
               {current.text}
             </p>
           </div>
@@ -29,7 +28,6 @@ export function MembersSection() {
             {memberCategories.map((category) => (
               <MemberCategory
                 key={category.id}
-                index={category.index}
                 title={category.title}
                 selected={category.id === active}
                 onSelect={() => setActive(category.id)}

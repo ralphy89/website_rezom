@@ -148,4 +148,4 @@ export const partnerBays = [
   },
 ] as const;
 
-export const allianceBayCount = 8;
+export const allianceBayCount = partnerBays.length + 1;

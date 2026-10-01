@@ -15,8 +15,8 @@ export function AboutApproach() {
     <section ref={ref} className="scroll-mt-36 bg-ink text-paper">
       <div className="mx-auto w-full max-w-[1400px] border-white/15 px-5 py-20 md:px-8 md:py-28 lg:border-l lg:px-14 xl:px-[72px]">
         <h2 className="section-title max-w-[14ch]">Une connexion peut tout changer.</h2>
-        <p className="mt-6 max-w-[42ch] text-[17px] leading-snug text-paper/80">
-          REZO M ne cherche pas simplement à multiplier les contacts. Nous voulons créer les conditions pour que les bonnes personnes se rencontrent.
+        <p className="mt-5 max-w-[42ch] text-[15px] leading-snug text-paper/80 md:mt-6 md:text-[17px]">
+          REZOM ne cherche pas simplement à multiplier les contacts. Nous voulons créer les conditions pour que les bonnes personnes se rencontrent.
         </p>
         <ol className="relative mt-14 max-w-[720px]">
           <span aria-hidden className="absolute bottom-2 left-[7px] top-2 w-px bg-white/20" />
@@ -31,8 +31,7 @@ export function AboutApproach() {
                 aria-hidden
                 className={cn("absolute left-0 h-4 w-4 rounded-full border", index === approachSteps.length - 1 ? "border-signal bg-signal" : "border-azure bg-ink")}
               />
-              <span className="font-mono text-[11px] tracking-[0.16em] text-paper/50">{step.index}</span>
-              <span className="font-display text-[clamp(1.6rem,3vw,2.4rem)] uppercase leading-none tracking-[-0.04em]">{step.title}</span>
+              <span className="font-display text-[1.2rem] uppercase leading-none tracking-[-0.04em] md:text-[clamp(1.6rem,3vw,2.4rem)]">{step.title}</span>
             </li>
           ))}
         </ol>

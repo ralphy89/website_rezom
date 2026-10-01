@@ -27,11 +27,11 @@ const mono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "REZO M — Connecter. Collaborer. Réussir.",
-    template: "%s — REZO M",
+    default: "REZOM — Connecter. Collaborer. Réussir.",
+    template: "%s — REZOM",
   },
   description:
-    "REZO M relie entrepreneurs, professionnels, étudiants et organisations. Les connexions créent les opportunités.",
+    "REZOM relie entrepreneurs, professionnels, étudiants et organisations. Les connexions créent les opportunités.",
   applicationName: site.name,
 };
 

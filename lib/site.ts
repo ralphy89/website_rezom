@@ -1,5 +1,5 @@
 export const site = {
-  name: "REZO M",
+  name: "REZOM",
   slogan: "Connecter – Collaborer – Réussir",
   tagline: "Les connexions créent les opportunités.",
   email: "contact@rezom.online",

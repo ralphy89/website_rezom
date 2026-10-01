@@ -1,6 +1,6 @@
-# REZO M
+# REZOM
 
-Site officiel du réseau professionnel et entrepreneurial REZO M. Slogan : Connecter – Collaborer – Réussir. Interface claire, industrielle, animée, en français.
+Site officiel du réseau professionnel et entrepreneurial REZOM. Slogan : Connecter – Collaborer – Réussir. Interface claire, industrielle, animée, en français.
 
 ## Lancer
 
@@ -31,7 +31,7 @@ Le menu relie Accueil, À propos, Réseau, Activités, Adhésion et Contact.
 - `lib/content.ts` — textes de l’accueil et plaques d’alliances
 - `lib/about.ts` — textes de la page À propos
 - `public/alliances/` — logos des partenaires
-- `public/logo.png` — logo REZO M
+- `public/logo.png` — logo REZOM
 
 ## Adhésion
 

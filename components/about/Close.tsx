@@ -40,9 +40,9 @@ export function AboutClose() {
           <br />
           par une rencontre.
         </h2>
-        <p className="mt-6 max-w-[36ch] text-[17px] leading-snug text-charcoal">Rejoignez une communauté qui avance, collabore et construit.</p>
+        <p className="mt-5 max-w-[36ch] text-[15px] leading-snug text-charcoal md:mt-6 md:text-[17px]">Rejoignez une communauté qui avance, collabore et construit.</p>
         <div className="mt-10 flex flex-wrap gap-3">
-          <Button href="/#adhesion">Rejoindre REZO M</Button>
+          <Button href="/#adhesion">Rejoindre REZOM</Button>
           <Button href="/#activites" variant="secondary">
             Découvrir nos activités
           </Button>

@@ -5,8 +5,8 @@ type LogoProps = {
 };
 
 const frames = {
-  header: "relative block h-[76px] w-[54px] md:h-[108px] md:w-[77px]",
-  footer: "relative block h-[210px] w-[149px] md:h-[240px] md:w-[170px]",
+  header: "relative block h-16 w-[46px] md:h-[108px] md:w-[77px]",
+  footer: "relative block h-[132px] w-[94px] md:h-[240px] md:w-[170px]",
 };
 
 export function Logo({ size = "header", priority = false }: LogoProps) {
@@ -14,7 +14,7 @@ export function Logo({ size = "header", priority = false }: LogoProps) {
     <span className={frames[size]}>
       <Image
         src="/logo.png"
-        alt="REZO M"
+        alt="REZOM"
         fill
         priority={priority}
         sizes={size === "footer" ? "200px" : "(min-width: 768px) 120px, 80px"}

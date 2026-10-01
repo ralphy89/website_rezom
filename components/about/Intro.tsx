@@ -19,10 +19,10 @@ export function AboutIntro() {
     <AboutShell>
       <div className="grid items-center gap-12 lg:grid-cols-12">
         <div className="lg:col-span-6">
-          <SectionLabel index="About">REZO M</SectionLabel>
+          <SectionLabel>À propos</SectionLabel>
           <h1 className="section-title text-ink">Plus qu’un réseau.</h1>
-          <p className="mt-6 max-w-[38ch] text-[17px] leading-snug text-charcoal md:text-[18px]">
-            REZO M est un réseau professionnel et entrepreneurial dédié à la connexion, à la collaboration et à la création d’opportunités.
+          <p className="mt-5 max-w-[38ch] text-[15px] leading-snug text-charcoal md:mt-6 md:text-[18px]">
+            REZOM est un réseau professionnel et entrepreneurial dédié à la connexion, à la collaboration et à la création d’opportunités.
           </p>
           <p className="mt-6 font-mono text-[12px] uppercase tracking-[0.16em] text-muted">
             Entrepreneurs. Professionnels. Étudiants. Porteurs de projets. Organisations.

@@ -52,7 +52,7 @@ export function Header() {
   return (
     <header ref={headerRef} className="fixed inset-x-0 top-0 z-50 border-b border-line bg-paper lg:supports-[backdrop-filter]:bg-paper/92 lg:supports-[backdrop-filter]:backdrop-blur-md">
       <div className="mx-auto flex w-full max-w-[1400px] items-center justify-between gap-4 px-5 py-3 md:px-8 lg:px-14 xl:px-[72px]">
-        <Link href="/" className="shrink-0" aria-label="REZO M, accueil">
+        <Link href="/" className="shrink-0" aria-label="REZOM, accueil">
           <Logo priority />
         </Link>
 
@@ -91,7 +91,7 @@ export function Header() {
             </span>
             <span className="relative z-10 inline-flex min-h-11 items-center bg-ink px-3.5 text-[12px] font-medium uppercase tracking-[0.14em] text-paper sm:px-4">
               <span className="sm:hidden">Rejoindre</span>
-              <span className="hidden sm:inline">Rejoindre REZO M</span>
+              <span className="hidden sm:inline">Rejoindre REZOM</span>
             </span>
           </Link>
           <button
@@ -118,14 +118,13 @@ export function Header() {
           style={{ top: height }}
         >
           <nav aria-label="Navigation mobile" className="flex flex-col px-5 py-6">
-            {navigation.map((item, index) => (
+            {navigation.map((item) => (
               <Link
                 key={item.id}
                 href={item.href}
-                className="flex min-h-14 items-center gap-4 border-b border-line text-[1.35rem] font-display uppercase tracking-[-0.04em]"
+                className="flex min-h-14 items-center border-b border-line text-[1.15rem] font-display uppercase tracking-[-0.04em]"
                 onClick={() => setOpen(false)}
               >
-                <span className="font-mono text-[11px] tracking-[0.16em] text-muted">{String(index + 1).padStart(2, "0")}</span>
                 {item.label}
               </Link>
             ))}

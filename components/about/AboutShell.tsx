@@ -20,7 +20,7 @@ export function AboutShell({ id, children, className, tone = "paper" }: AboutShe
     >
       <div
         className={cn(
-          "mx-auto w-full max-w-[1400px] px-5 py-20 md:px-8 md:py-28 lg:border-l lg:px-14 xl:px-[72px]",
+          "mx-auto w-full max-w-[1400px] px-5 py-14 md:px-8 md:py-28 lg:border-l lg:px-14 xl:px-[72px]",
           tone === "ink" ? "border-white/15" : "border-line",
         )}
       >

@@ -14,7 +14,7 @@ import { Header } from "@/components/sections/Header";
 
 export const metadata: Metadata = {
   title: "À propos",
-  description: "REZO M relie talents, entrepreneurs et organisations. Plus qu’un réseau : connecter, collaborer, réussir.",
+  description: "REZOM relie talents, entrepreneurs et organisations. Plus qu’un réseau : connecter, collaborer, réussir.",
 };
 
 export default function AboutPage() {

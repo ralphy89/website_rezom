@@ -8,14 +8,14 @@ export function NetworkExperience() {
   return (
     <SectionShell id="experience" tone="panel">
       <Reveal>
-        <SectionLabel index="04">Carte</SectionLabel>
+        <SectionLabel>Carte</SectionLabel>
       </Reveal>
       <div className="relative border border-line-strong bg-surface p-3 md:p-5">
         <div className="border border-line px-2 py-4 md:px-6 md:py-8">
           <ConnectionMap />
         </div>
         <div className="mt-5 flex flex-col gap-4 px-2 pb-2 sm:flex-row sm:items-end sm:justify-between md:px-3">
-          <p className="max-w-[16ch] font-display text-[clamp(1.8rem,3.4vw,2.8rem)] leading-[0.95] tracking-[-0.04em]">
+          <p className="max-w-[18ch] font-display text-[1.25rem] leading-snug tracking-[-0.04em] md:max-w-[16ch] md:text-[clamp(1.8rem,3.4vw,2.8rem)] md:leading-[0.95]">
             Une connexion peut tout changer.
           </p>
           <SignalIndicator label="Live map" />

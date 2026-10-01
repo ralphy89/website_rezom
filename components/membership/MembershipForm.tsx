@@ -133,11 +133,11 @@ export function MembershipForm() {
   if (reference) {
     return (
       <div id="demande" className="border border-line-strong bg-surface p-6 md:p-8">
-        <h3 ref={successRef} tabIndex={-1} className="font-display text-[clamp(2.2rem,5vw,3.4rem)] leading-none tracking-[-0.04em] outline-none">
+        <h3 ref={successRef} tabIndex={-1} className="font-display text-[1.6rem] leading-none tracking-[-0.04em] outline-none md:text-[clamp(2.2rem,5vw,3.4rem)]">
           Demande reçue.
         </h3>
-        <p className="mt-4 max-w-sm text-[17px] leading-relaxed text-charcoal">
-          Votre connexion avec REZO M commence ici.
+        <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-charcoal md:text-[17px]">
+          Votre connexion avec REZOM commence ici.
         </p>
         <div className="mx-auto mt-8 max-w-sm">
           <NodeCluster active caption="Connexion établie." />
@@ -168,8 +168,8 @@ export function MembershipForm() {
       </div>
 
       {step === 0 ? (
-        <div className="mt-8 grid gap-5 sm:grid-cols-2">
-          <Field id={`${formId}-fullName`} label="Nom complet" error={errors.fullName} className="sm:col-span-2">
+        <div className="mt-8 grid gap-5 md:grid-cols-2">
+          <Field id={`${formId}-fullName`} label="Nom complet" error={errors.fullName} className="md:col-span-2">
             <input
               id={`${formId}-fullName`}
               name="fullName"
@@ -209,7 +209,7 @@ export function MembershipForm() {
               className={cn(controlClass, "h-12")}
             />
           </Field>
-          <Field id={`${formId}-profession`} label="Profession / Fonction" error={errors.profession} className="sm:col-span-2">
+          <Field id={`${formId}-profession`} label="Profession / Fonction" error={errors.profession} className="md:col-span-2">
             <input
               id={`${formId}-profession`}
               name="profession"
@@ -254,7 +254,7 @@ export function MembershipForm() {
             onChange={(value) => update("tier", value)}
           />
 
-          <Field id={`${formId}-motivation`} label="Pourquoi souhaitez-vous rejoindre REZO M ?" error={errors.motivation}>
+          <Field id={`${formId}-motivation`} label="Pourquoi souhaitez-vous rejoindre REZOM ?" error={errors.motivation}>
             <textarea
               id={`${formId}-motivation`}
               name="motivation"
@@ -283,7 +283,7 @@ export function MembershipForm() {
               <span>
                 <span className="block text-[15px]">J&apos;accepte les conditions d&apos;adhésion.</span>
                 <span id={`${formId}-terms-note`} className="mt-1 block text-[13px] leading-snug text-muted">
-                  REZO M pourra vous contacter au sujet de votre demande.
+                  REZOM pourra vous contacter au sujet de votre demande.
                 </span>
               </span>
             </label>
@@ -385,7 +385,7 @@ function ChoiceGroup({
   return (
     <fieldset aria-describedby={error ? errorId : undefined}>
       <legend className="mb-3 font-mono text-[11px] uppercase tracking-[0.16em] text-muted">{legend}</legend>
-      <div className="grid gap-2 sm:grid-cols-2">
+      <div className="grid gap-2 md:grid-cols-2">
         {options.map((option) => {
           const selected = value === option.value;
           return (

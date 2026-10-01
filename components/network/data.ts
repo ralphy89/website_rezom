@@ -15,7 +15,7 @@ export const heroView = { width: 560, height: 620 };
 export const heroNodes: NetworkPoint[] = [
   {
     id: "core",
-    label: "REZO M",
+    label: "REZOM",
     x: 278,
     y: 304,
     r: 26,

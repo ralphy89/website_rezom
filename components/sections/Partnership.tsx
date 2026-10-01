@@ -9,11 +9,11 @@ export function PartnershipSection() {
     <SectionShell id="partenaires" tone="panel">
       <div className="grid gap-12 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
-          <SectionLabel index="06">Alliances</SectionLabel>
+          <SectionLabel>Alliances</SectionLabel>
           <h2 className="section-title text-ink">Construisons ensemble.</h2>
           <ul className="mt-8 space-y-2">
             {partners.map((partner) => (
-              <li key={partner} className="font-display text-[clamp(1.4rem,2.5vw,2rem)] uppercase leading-none tracking-[-0.04em]">
+              <li key={partner} className="font-display text-[1.15rem] uppercase leading-none tracking-[-0.04em] md:text-[clamp(1.4rem,2.5vw,2rem)]">
                 {partner}.
               </li>
             ))}
@@ -25,20 +25,18 @@ export function PartnershipSection() {
             Devenir partenaire
           </a>
         </Reveal>
-        <div className="grid grid-cols-1 gap-px border border-line-strong bg-line-strong sm:grid-cols-2 lg:col-span-7">
+        <div className="grid grid-cols-1 gap-px border border-line-strong bg-line-strong md:grid-cols-2 lg:col-span-7">
           {Array.from({ length: allianceBayCount }, (_, slot) => {
             const bay = partnerBays[slot];
-            const index = String(slot + 1).padStart(2, "0");
 
             if (!bay) {
               return (
                 <a
-                  key={index}
+                  key={`slot-${slot}`}
                   href="#adhesion"
                   className="bay-slot group flex min-h-[156px] flex-col justify-between p-4 md:min-h-[176px] md:p-5"
                 >
-                  <span className="relative z-10 flex items-center justify-between gap-3">
-                    <span className="font-mono text-[11px] tracking-[0.16em] text-muted">{index}</span>
+                  <span className="relative z-10 flex items-center justify-end gap-3">
                     <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em]">
                       <span className="bay-led" aria-hidden />
                       <span className="grid">
@@ -70,7 +68,7 @@ export function PartnershipSection() {
                   <span className="relative z-10">
                     <span className="mb-2 block h-px origin-left scale-x-0 bg-azure transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-x-100 group-focus-visible:scale-x-100" />
                     <span className="block font-mono text-[10px] uppercase tracking-[0.16em] text-muted transition-colors duration-300 group-hover:text-ink group-focus-visible:text-ink">
-                      Ajoutez votre logo
+                      Devenez le prochain partenaire
                     </span>
                   </span>
                 </a>
@@ -79,8 +77,7 @@ export function PartnershipSection() {
 
             return (
               <article key={bay.index} className="flex min-h-[132px] flex-col justify-between bg-surface p-4 md:min-h-[148px] md:p-5">
-                <div className="flex items-center justify-between gap-3">
-                  <span className="font-mono text-[11px] tracking-[0.16em] text-muted">{bay.index}</span>
+                <div className="flex items-center justify-end gap-3">
                   <span className="inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.16em] text-muted">
                     <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-azure" />
                     Intl

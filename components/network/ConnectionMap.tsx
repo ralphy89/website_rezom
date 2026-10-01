@@ -33,7 +33,7 @@ export function ConnectionMap() {
   const nodes: NetworkPoint[] = [
     {
       id: "core",
-      label: "REZO M",
+      label: "REZOM",
       x: cx,
       y: cy,
       r: compact ? 22 : 28,
@@ -68,7 +68,7 @@ export function ConnectionMap() {
         viewBox={`0 0 ${width} ${height}`}
         className="h-auto w-full"
         role="img"
-        aria-label="Carte du réseau REZO M reliant talents, entreprises, projets, mentors, partenaires et opportunités."
+        aria-label="Carte du réseau REZOM reliant talents, entreprises, projets, mentors, partenaires et opportunités."
       >
         {visible ? (
         <>

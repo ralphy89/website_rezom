@@ -52,16 +52,13 @@ export function NetworkCanvas() {
     <div className="relative border border-line-strong bg-surface/80">
       <div className="flex items-center justify-between border-b border-line px-4 py-3">
         <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">Net-map</span>
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
-          {String(nodes.length).padStart(2, "0")} nodes
-        </span>
       </div>
       <div className="px-3 py-2 sm:px-4">
         <svg
           viewBox={`0 0 ${heroView.width} ${heroView.height}`}
           className="h-auto w-full"
           role="img"
-          aria-label="Réseau REZO M : entrepreneurs, professionnels, étudiants, entreprises, partenaires et projets reliés à un nœud central."
+          aria-label="Réseau REZOM : entrepreneurs, professionnels, étudiants, entreprises, partenaires et projets reliés à un nœud central."
           onPointerMove={(event) => {
             if (!interactive) return;
             const rect = event.currentTarget.getBoundingClientRect();

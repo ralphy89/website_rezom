@@ -28,7 +28,7 @@ export const missionPanels = [
     index: "02",
     label: "Vision",
     title: "Construire un réseau de référence.",
-    text: "Faire de REZO M une plateforme majeure de réseautage professionnel et entrepreneurial en Haïti et à l’international.",
+    text: "Faire de REZOM une plateforme majeure de réseautage professionnel et entrepreneurial en Haïti et à l’international.",
   },
 ] as const;
 

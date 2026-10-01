@@ -31,19 +31,16 @@ export function AboutAmbition() {
           {ambitionModules.map((module, index) => (
             <motion.article
               key={module.index}
-              className="min-h-[220px] bg-surface p-6 md:p-8"
+              className="bg-surface p-5 md:min-h-[220px] md:p-8"
               initial={reduced ? false : { opacity: 0.4 }}
               animate={visible ? { opacity: 1 } : { opacity: 0.4 }}
               transition={{ duration: reduced ? 0 : 0.55, delay: reduced ? 0 : index * 0.16, ease: easeMechanical }}
             >
-              <div className="flex items-center justify-between">
-                <span className="font-mono text-[11px] tracking-[0.16em] text-muted">{module.index}</span>
-                <span className="h-1.5 w-1.5 rounded-full bg-azure" style={{ opacity: visible ? 1 : 0.25 }} />
-              </div>
-              <h3 className="mt-10 font-display text-[clamp(1.6rem,2.4vw,2.2rem)] uppercase leading-none tracking-[-0.04em]">
+              <span className="block h-1.5 w-1.5 rounded-full bg-azure" style={{ opacity: visible ? 1 : 0.25 }} />
+              <h3 className="mt-5 font-display text-[1.15rem] uppercase leading-none tracking-[-0.04em] md:mt-10 md:text-[clamp(1.6rem,2.4vw,2.2rem)]">
                 {module.title}
               </h3>
-              <p className="mt-4 max-w-[28ch] text-[16px] leading-snug text-charcoal">{module.text}</p>
+              <p className="mt-2 max-w-[32ch] text-[14px] leading-snug text-charcoal md:mt-4 md:text-[16px]">{module.text}</p>
             </motion.article>
           ))}
         </div>

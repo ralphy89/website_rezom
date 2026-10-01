@@ -20,7 +20,7 @@ export function NodeCluster({ active = false, caption = "Connexion établie." }:
 
   return (
     <div className="w-full">
-      <svg viewBox="0 0 250 160" className="h-auto w-full" role="img" aria-label="Nouvelle connexion activée dans le réseau REZO M">
+      <svg viewBox="0 0 250 160" className="h-auto w-full" role="img" aria-label="Nouvelle connexion activée dans le réseau REZOM">
         <motion.path
           d={`M ${points.known.x} ${points.known.y} L ${points.core.x} ${points.core.y}`}
           fill="none"

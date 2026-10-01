@@ -53,7 +53,7 @@ export function AboutEcosystem() {
             <circle cx={cx} cy={cy} r="28" fill="#F4F3EF" stroke="#252A75" />
             <circle cx={cx} cy={cy} r="6" fill="#239DD6" />
           </svg>
-          <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[140%] font-mono text-[11px] uppercase tracking-[0.16em]">REZO M</p>
+          <p className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[140%] font-mono text-[11px] uppercase tracking-[0.16em]">REZOM</p>
           {nodes.map((node) => {
             const on = !active || active === node.id;
             return (

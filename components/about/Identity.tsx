@@ -28,16 +28,16 @@ export function AboutIdentity() {
       <div className={reduced ? undefined : "sticky top-28"}>
         <div className="mx-auto grid w-full max-w-[1400px] items-start gap-8 border-line px-5 py-16 md:px-8 lg:grid-cols-12 lg:border-l lg:px-14 lg:py-20 xl:px-[72px]">
           <div className="lg:col-span-5">
-            <h2 className="font-display text-[clamp(2.2rem,4vw,3.4rem)] uppercase leading-[0.92] tracking-[-0.04em] text-ink">Qui sommes-nous ?</h2>
+            <h2 className="font-display text-[1.5rem] uppercase leading-[0.96] tracking-[-0.04em] text-ink md:text-[clamp(2.2rem,4vw,3.4rem)] md:leading-[0.92]">Qui sommes-nous ?</h2>
             <p className="mt-5 max-w-[38ch] text-[16px] leading-snug text-charcoal">
-              REZO M rassemble des personnes et des organisations autour d’une ambition commune : créer des connexions utiles, partager les connaissances et développer des collaborations durables.
+              REZOM rassemble des personnes et des organisations autour d’une ambition commune : créer des connexions utiles, partager les connaissances et développer des collaborations durables.
             </p>
           </div>
           <div className="lg:col-span-7">
             <ol>
               {identityWords.map((word, index) => (
                 <li key={word}>
-                  <p className={cn("font-display text-[clamp(2.4rem,5vw,4.4rem)] uppercase leading-[0.9] tracking-[-0.045em] transition-colors duration-500", shown === index ? "text-ink" : "text-line")}>
+                  <p className={cn("font-display text-[1.45rem] uppercase leading-[0.95] tracking-[-0.045em] transition-colors duration-500 md:text-[clamp(2.4rem,5vw,4.4rem)] md:leading-[0.9]", shown === index ? "text-ink" : "text-line")}>
                     {word}.
                   </p>
                 </li>

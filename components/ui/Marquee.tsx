@@ -8,7 +8,7 @@ export function Marquee() {
           <ul key={copy} className="flex shrink-0 items-center">
             {marqueeItems.map((item) => (
               <li key={`${copy}-${item}`} className="flex items-center">
-                <span className="px-7 font-display text-[clamp(1.7rem,3.6vw,3.15rem)] uppercase leading-none tracking-[-0.045em] md:px-10">
+                <span className="px-4 font-display text-[1rem] uppercase leading-none tracking-[-0.045em] md:px-10 md:text-[clamp(1.7rem,3.6vw,3.15rem)]">
                   {item}
                 </span>
                 <NodeSeparator />
