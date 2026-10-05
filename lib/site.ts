@@ -3,6 +3,15 @@ export const site = {
   slogan: "Connecter – Collaborer – Réussir",
   tagline: "Les connexions créent les opportunités.",
   email: "contact@rezom.online",
+  phones: [
+    {
+      display: "3220 7787",
+      whatsapp: true,
+      message: "Bonjour REZOM, je souhaite en savoir plus sur le réseau.",
+    },
+    { display: "3643 4149" },
+    { display: "4919 9364" },
+  ],
   year: 2026,
   socials: [
     { label: "LinkedIn", href: "" },

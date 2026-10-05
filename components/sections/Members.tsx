@@ -16,7 +16,7 @@ export function MembersSection() {
       <div className="grid items-start gap-10 lg:grid-cols-12">
         <Reveal className="lg:col-span-5">
           <SectionLabel>Membres</SectionLabel>
-          <h2 className="section-title text-ink">Qui peut rejoindre REZOM ?</h2>
+          <h2 className="section-title text-ink">Qui peut rejoindre <span className="text-azure">REZOM</span> ?</h2>
         </Reveal>
         <div className="lg:col-span-7">
           <div className="border border-line-strong bg-surface p-5 md:p-7" aria-live="polite">

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Logo } from "@/components/ui/Logo";
 import { SignalIndicator } from "@/components/ui/SignalIndicator";
 import { navigation, site } from "@/lib/site";
+import { MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -29,18 +30,36 @@ export function Footer() {
           <a href={`mailto:${site.email}`} className="mt-4 inline-flex min-h-11 items-center text-[16px] text-ink underline decoration-azure underline-offset-4">
             {site.email}
           </a>
-          <ul className="mt-4 space-y-2">
-            {site.socials.map((social) => (
-              <li key={social.label} className="font-mono text-[12px] uppercase tracking-[0.16em] text-charcoal">
-                {social.href ? (
-                  <a href={social.href} className="inline-flex min-h-11 items-center underline-offset-4 hover:underline">
-                    {social.label}
+          <ul className="mt-3 space-y-2">
+            {site.phones.map((phone) => {
+              const digits = phone.display.replace(/\s/g, "");
+              if (phone.whatsapp) {
+                const href = `https://wa.me/509${digits}?text=${encodeURIComponent(phone.message)}`;
+                return (
+                  <li key={phone.display}>
+                    <a
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex min-h-11 items-center gap-2.5 bg-[#25D366] px-4 text-[12px] font-medium uppercase tracking-[0.14em] text-paper"
+                    >
+                      <MessageCircle size={18} className="h-4 w-4" />
+                      WhatsApp
+                    </a>
+                  </li>
+                );
+              }
+              return (
+                <li key={phone.display}>
+                  <a
+                    href={`tel:+509${digits}`}
+                    className="inline-flex min-h-11 items-center font-mono text-[15px] tracking-[0.08em] text-ink underline-offset-4 hover:underline"
+                  >
+                    {phone.display}
                   </a>
-                ) : (
-                  <span className="inline-flex min-h-11 items-center">{social.label}</span>
-                )}
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ul>
         </div>
       </div>

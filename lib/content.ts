@@ -143,8 +143,14 @@ export const partnerBays = [
   {
     index: "03",
     name: "Fòs Jenès",
-    text: "Finance haïtienne et correspondants internationaux.",
+    text: "",
     logo: "/alliances/FOS-J-LOGO.png",
+  },
+  {
+    index: "04",
+    name: "EA",
+    text: "",
+    logo: "/alliances/EA_LOGO.png",
   },
 ] as const;
 

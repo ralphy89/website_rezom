@@ -10,9 +10,7 @@ export function ValueSection() {
       <Reveal>
         <SectionLabel>Réseau</SectionLabel>
         <h2 className="section-title max-w-[12ch] text-ink">
-          Un réseau.
-          <br />
-          Des opportunités.
+          Le réseau des <br /><span className="text-azure">Opportunités</span>.
         </h2>
       </Reveal>
       <div className="mt-8 grid gap-3 md:mt-12 md:gap-4 lg:grid-cols-3">

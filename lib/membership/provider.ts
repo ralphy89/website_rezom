@@ -1,14 +1,21 @@
+import { submitToGoogleForm } from "./google-form";
 import type { MembershipApplication } from "./types";
 
 /**
- * Membership delivery is intentionally provider-agnostic.
- * Set MEMBERSHIP_WEBHOOK_URL to forward applications to n8n, a custom API,
- * or an automation that writes to Supabase / Airtable.
- * Without that variable, applications are acknowledged with a reference id.
+ * Applications are posted to the REZOM Google Form.
+ * Optionally set MEMBERSHIP_WEBHOOK_URL to also forward the payload to n8n,
+ * a custom API, or an automation that writes to Supabase / Airtable.
  */
 export type MembershipSink = {
   submit(data: MembershipApplication): Promise<{ id: string }>;
 };
+
+class GoogleFormSink implements MembershipSink {
+  async submit(data: MembershipApplication) {
+    await submitToGoogleForm(data);
+    return { id: crypto.randomUUID() };
+  }
+}
 
 class WebhookSink implements MembershipSink {
   constructor(
@@ -38,16 +45,24 @@ class WebhookSink implements MembershipSink {
   }
 }
 
-class AckSink implements MembershipSink {
-  async submit() {
-    return { id: crypto.randomUUID() };
+class CompositeSink implements MembershipSink {
+  constructor(private sinks: MembershipSink[]) {}
+
+  async submit(data: MembershipApplication) {
+    let id = "";
+    for (const sink of this.sinks) {
+      const result = await sink.submit(data);
+      id = result.id;
+    }
+    return { id };
   }
 }
 
 export function createMembershipSink(): MembershipSink {
+  const sinks: MembershipSink[] = [new GoogleFormSink()];
   const url = process.env.MEMBERSHIP_WEBHOOK_URL?.trim();
-  if (url) return new WebhookSink(url, process.env.MEMBERSHIP_WEBHOOK_SECRET?.trim() || undefined);
-  return new AckSink();
+  if (url) sinks.push(new WebhookSink(url, process.env.MEMBERSHIP_WEBHOOK_SECRET?.trim() || undefined));
+  return sinks.length === 1 ? sinks[0] : new CompositeSink(sinks);
 }
 
 export function submitToProvider(data: MembershipApplication) {
